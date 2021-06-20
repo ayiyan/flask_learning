@@ -1,0 +1,39 @@
+Django:
+比较重量,内部包含了非常多的组件
+ORM, Form, ModelForm, Cache, Session,middleware, single, etc..
+
+Flask: 
+短小精悍,自己内部没有太多的组件,第三方的组件非常丰富
+如果想把flask构造成和django一样的东西,是完全可以的,
+开发简单 或 复杂的程序flask都可以, 因为可以使用flask的组件自己进行拼接
+可定制性非常强, 对于开发不是太熟悉,又想让程序中更加便捷, 更多的组件来支持的时候可以用djano
+当你开发大型系统的时候,这俩其实是都可以的,开发小的东西的时候,flask就比较简单
+
+Tornado:
+异步非阻塞框架
+
+bottle:
+bottle比flask更加的轻量
+
+web.py:
+
+
+
+1, 安装flask
+a,
+pip3 install flask
+
+b,
+wsgi, 帮助创建socket
+在flask中使用werzeug实现的wsgi
+
+    from werzeug.wrappers import Request, Response
+    	
+    @Request.application
+    def hello(request):
+    	return Response('Hello World!')
+    
+    if __name__ = '__main__':
+    	from werzeug.serving import run_simple
+    	run_simple('localhost', 4000, hello)
+    
